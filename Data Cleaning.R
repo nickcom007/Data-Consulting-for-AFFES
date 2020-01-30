@@ -42,4 +42,7 @@ length(unique(nick_df$TOWNSHIP))
 # OWNERSHIP: NA not recorded or ? 
 ## LICENSEE: mess....   /2487 MISSING
 
-  
+
+# convert to factors
+nick_df = mutate_if(nick_df, is.character, as.factor)
+str(nick_df)
